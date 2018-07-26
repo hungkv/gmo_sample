@@ -1,0 +1,19 @@
+<div class="container">
+  <h1>Confirm Payment</h1>
+  <div class="product">
+    <h2>Pack of 5 ticket for $5</h2>
+    <h3>Free shipping anywhere in the world</h3>
+    <div class="sticker">
+      <%= image_tag("buy_now.jpg")%>
+    </div>
+
+    <%= form_tag payments_create_payment_path() do %>
+      <article>
+        <label class="amount">
+          <span>Amount: 円1000.00</span>
+        </label>
+      </article>
+      <%= button_tag :confirm %>
+    <% end %>
+  </div>
+</div>

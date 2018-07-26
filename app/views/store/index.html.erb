@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Demo App</h1>
+  <div class="product">
+    <h2>Pack of 5 ticket for $5</h2>
+    <h3>Free shipping anywhere in the world</h3>
+    <div class="sticker">
+      <%= image_tag("buy_now.jpg")%>
+    </div>
+
+    <%= form_tag charges_path do %>
+      <article>
+        <% if flash[:error].present? %>
+          <div class="error-explaination">
+            <p><%= flash[:error] %></p>
+          </div>
+        <% end %>
+        <label class="amount">
+          <span>Amount: $5.00</span>
+        </label>
+      </article>
+      <%= hidden_field_tag :amount, 5.00 %>
+      <%= button_tag :submit %>
+    <% end %>
+  </div>
+</div>

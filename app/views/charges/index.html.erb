@@ -1,0 +1,16 @@
+<body OnLoad='OnLoadEvent();'>
+  <form name="UnionpayStartCall" action="<%= @start_url %>" method="POST">
+    <noscript>
+      <center>
+        <input type="submit" value="">
+      </center>
+      </noscript>
+    <input type="hidden" name="AccessID" value="<%= @access_id %>">
+    <input type="hidden" name="Token" value="<%= @unionpay_token %>">
+  </form>
+  <script >
+    function OnLoadEvent() {
+      document.UnionpayStartCall.submit();
+    }
+  </script>
+</body>
